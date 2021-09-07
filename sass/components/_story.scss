@@ -23,12 +23,12 @@
 
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(12.01deg);
     position: relative;
   }
   &__image {
     height: 100%;
-    // transform: translateX(-4rem) scale(1.i);
+    transform: translateX(-4rem) scale(1.4);
     transition: all 0.5s;
     backface-visibility: hidden;
   }
