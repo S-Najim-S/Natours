@@ -5,3 +5,58 @@
     clear: both;
   }
 }
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Media Query Manager
+
+// 0       -   600px     Phone
+// 600px   -   900px     Tablet portrait
+// 900px   -   1200px    Tablet landscape
+// 1800px  -   max       Desktop
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+/*
+$breakpoint argument choices:
+-phone
+-tab-por
+-tab-lan
+-desk-big
+
+1rem = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      // 600px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-por {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-lan {
+    // 1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desk-big {
+    //1800+ px
+    @media (max-width: 112.5em) {
+      @content;
+    }
+  }
+}

@@ -7,9 +7,15 @@
 }
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
+  @include respond(tab-por) {
+    margin-bottom: 2rem;
+  }
 }
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
+  @include respond(tab-por) {
+    margin-bottom: 5rem !important;
+  }
 }
 .u-align-left {
   text-align: left !important;

@@ -18,11 +18,15 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  @include respond(tab-por) {
+    padding: 10rem 0;
+  }
 }
 .section-tours {
   background-color: $color-grey-light;
   margin-top: -20vh;
-  padding: 25rem 0 10rem 0;
+  padding: 30rem 0 10rem 0;
 }
 .section-stories {
   position: relative;
@@ -48,10 +52,22 @@
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5 4rem rgba($color-black, 0.2);
-  height: 50rem;
+
+  @include respond(tab-por) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/nat-10.jpg);
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
+
+    @include respond(tab-por) {
+      width: 100%;
+    }
   }
 }
